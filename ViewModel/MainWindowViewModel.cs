@@ -1,9 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.Input;
+using System.Windows.Input;
 
 namespace TicTacToe.ViewModel
 {
@@ -16,9 +13,26 @@ namespace TicTacToe.ViewModel
             set => SetProperty(ref _title, value);
         }
 
+        private string _player = "Player 1";
+
+        public string Player
+        {
+            get => _player;
+            set => SetProperty(ref _player, value);
+        }
+
+        public ICommand MakeMoveCommand { get; }
+
+        private void MakeMove()
+        {
+            Player = "pero";
+        }
+
         public MainWindowViewModel()
         {
+            MakeMoveCommand = new RelayCommand(MakeMove);
             _title = "Welcome to tic tac toe!";
         }
+
     }
 }
