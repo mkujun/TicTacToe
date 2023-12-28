@@ -8,7 +8,7 @@
     <StackPanel>
         <Label Content="{Binding Title}" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
 
-        <Grid>
+        <Grid Height="300">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
@@ -23,55 +23,55 @@
             <!-- Top-left cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="0">
                 <!-- Content of the top-left cell goes here -->
-                <Label>1</Label>
+                <Button>1</Button>
             </Border>
 
             <!-- Top-middle cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="1">
                 <!-- Content of the top-middle cell goes here -->
-                <Label>2</Label>
+                <Button>2</Button>
             </Border>
 
             <!-- Top-right cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="2">
                 <!-- Content of the top-right cell goes here -->
-                <Label>3</Label>
+                <Button>3</Button>
             </Border>
 
             <!-- Middle-left cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="0">
                 <!-- Content of the middle-left cell goes here -->
-                <Label>4</Label>
+                <Button>4</Button>
             </Border>
 
             <!-- Middle cell (with thicker border) -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="1">
                 <!-- Content of the middle cell goes here -->
-                <Label>5</Label>
+                <Button>5</Button>
             </Border>
 
             <!-- Middle-right cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="2">
                 <!-- Content of the middle-right cell goes here -->
-                <Label>6</Label>
+                <Button>6</Button>
             </Border>
 
             <!-- Bottom-left cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.Column="0">
                 <!-- Content of the bottom-left cell goes here -->
-                <Label>7</Label>
+                <Button>7</Button>
             </Border>
 
             <!-- Bottom-middle cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.Column="1">
                 <!-- Content of the bottom-middle cell goes here -->
-                <Label>8</Label>
+                <Button>8</Button>
             </Border>
 
             <!-- Bottom-right cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.Column="2">
                 <!-- Content of the bottom-right cell goes here -->
-                <Label>9</Label>
+                <Button>9</Button>
             </Border>
 
         </Grid>
