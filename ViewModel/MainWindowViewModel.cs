@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Windows.Documents;
 using System.Windows.Input;
+using TicTacToe.Model;
 
 namespace TicTacToe.ViewModel
 {
@@ -26,7 +27,7 @@ namespace TicTacToe.ViewModel
             set => SetProperty(ref _player, value);
         }
 
-        public List<string> _squares { get; set; }
+        public TicTacToeModel ticTacToe { get; set; }
 
         public RelayCommand<string> MakeMoveCommand { get; }
 
@@ -59,11 +60,7 @@ namespace TicTacToe.ViewModel
         public MainWindowViewModel()
         {
             _title = "Welcome to tic tac toe!";
-            _squares = new List<string>
-            {
-                "", "", "", "", "", "", "", "", ""
-            };
-            
+            ticTacToe = new TicTacToeModel();
             MakeMoveCommand = new RelayCommand<string>(ExecuteMakeMoveCommand, CanExecuteMakeMoveCommand);
         }
 
