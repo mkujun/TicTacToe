@@ -1,5 +1,10 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Microsoft.VisualBasic;
+using System;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace TicTacToe.ViewModel
@@ -13,7 +18,7 @@ namespace TicTacToe.ViewModel
             set => SetProperty(ref _title, value);
         }
 
-        private string _player = "Player 1";
+        private string _player = "X";
 
         public string Player
         {
@@ -21,17 +26,45 @@ namespace TicTacToe.ViewModel
             set => SetProperty(ref _player, value);
         }
 
-        public ICommand MakeMoveCommand { get; }
+        public List<string> _squares { get; set; }
 
+        public RelayCommand<string> MakeMoveCommand { get; }
+
+        // todo: take square index and mark it as "X" or "O"
         private void MakeMove()
         {
-            Player = "pero";
+            if (Player == "O")
+            {
+                Player = "X";
+            }
+            else if (Player == "X")
+            {
+                Player = "O";
+            }
+        }
+
+        private bool CanExecuteMakeMoveCommand(string? parameter)
+        {
+            return parameter != null ? true : false;
+        }
+
+        private void ExecuteMakeMoveCommand(string? parameter)
+        {
+            if (parameter != null)
+            {
+                // todo: add "parameter" in list of squares
+            } 
         }
 
         public MainWindowViewModel()
         {
-            MakeMoveCommand = new RelayCommand(MakeMove);
             _title = "Welcome to tic tac toe!";
+            _squares = new List<string>
+            {
+                "", "", "", "", "", "", "", "", ""
+            };
+            
+            MakeMoveCommand = new RelayCommand<string>(ExecuteMakeMoveCommand, CanExecuteMakeMoveCommand);
         }
 
     }

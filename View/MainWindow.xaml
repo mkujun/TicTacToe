@@ -24,55 +24,55 @@
             <!-- Top-left cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="0">
                 <!-- Content of the top-left cell goes here -->
-                <Button Command="{Binding MakeMoveCommand}">1</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="1">1</Button>
             </Border>
 
             <!-- Top-middle cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="1">
                 <!-- Content of the top-middle cell goes here -->
-                <Button>2</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="2">2</Button>
             </Border>
 
             <!-- Top-right cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="0" Grid.Column="2">
                 <!-- Content of the top-right cell goes here -->
-                <Button>3</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="3">3</Button>
             </Border>
 
             <!-- Middle-left cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="0">
                 <!-- Content of the middle-left cell goes here -->
-                <Button>4</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="4">4</Button>
             </Border>
 
             <!-- Middle cell (with thicker border) -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="1">
                 <!-- Content of the middle cell goes here -->
-                <Button>5</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="5">5</Button>
             </Border>
 
             <!-- Middle-right cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="1" Grid.Column="2">
                 <!-- Content of the middle-right cell goes here -->
-                <Button>6</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="6">6</Button>
             </Border>
 
             <!-- Bottom-left cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.Column="0">
                 <!-- Content of the bottom-left cell goes here -->
-                <Button>7</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="7">7</Button>
             </Border>
 
             <!-- Bottom-middle cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.Column="1">
                 <!-- Content of the bottom-middle cell goes here -->
-                <Button>8</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="8">8</Button>
             </Border>
 
             <!-- Bottom-right cell -->
             <Border BorderBrush="Black" BorderThickness="1" Grid.Row="2" Grid.Column="2">
                 <!-- Content of the bottom-right cell goes here -->
-                <Button>9</Button>
+                <Button Command="{Binding MakeMoveCommand}" CommandParameter="9">9</Button>
             </Border>
 
         </Grid>
